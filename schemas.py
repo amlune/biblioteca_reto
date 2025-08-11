@@ -24,6 +24,9 @@ class LibroBase(BaseModel):
     estado: str
     tipo: str
     stock: int
+    precio_fisico: float
+    precio_digital: float
+    stock_minimo: int
 
 class LibroCreate(LibroBase):
     pass
@@ -46,6 +49,7 @@ class Prestamo(PrestamoBase):
     fecha_inicio: datetime
     fecha_fin: datetime | None
     estado: str
+    extension_usada: int
     class Config:
         orm_mode = True
         
@@ -53,6 +57,7 @@ class Prestamo(PrestamoBase):
 class CompraBase(BaseModel):
     usuario_id: int
     libro_id: int
+    cantidad: int
     precio_final: float
 
 class CompraCreate(CompraBase):
