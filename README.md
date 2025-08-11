@@ -12,6 +12,7 @@ python -m venv venv
 source .\venv\Scripts\activate.bat
 pip install -r requirements.txt
 uvicorn main:app --reload
+```
 
 [Swagger Docs](http://127.0.0.1:8000/docs)
 
@@ -35,7 +36,6 @@ uvicorn main:app --reload
 ```
 
 - Crear Libro
-
 ```
 {
   "titulo": "Introducción a Python",
@@ -47,7 +47,6 @@ uvicorn main:app --reload
 ```
 
 - Crear Préstamo
-
 ```
 {
   "usuario_id": 1,
@@ -56,7 +55,6 @@ uvicorn main:app --reload
 ```
 
 - Crear Compra
-
 ```
 {
   "usuario_id": 1,
